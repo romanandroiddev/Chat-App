@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GraphQlChatApp</string>
+
+    <string name="error_unexpected_message">Something went wrong, please try again.</string>
+</resources>

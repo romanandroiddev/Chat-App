@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpScreen">
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="uz.project.graphqlchatapp.presentation.ui.signupOrLogin.SignUpScreen"
+        android:label="SignUpScreen" />
+    <fragment
+        android:id="@+id/chatScreen"
+        android:name="uz.project.graphqlchatapp.presentation.ui.main.ChatScreen"
+        android:label="ChatScreen" />
+    <action
+        android:id="@+id/action_global_chatScreen"
+        app:destination="@id/chatScreen" />
+</navigation>

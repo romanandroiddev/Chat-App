@@ -1,0 +1,36 @@
+query MessageList{
+  messages{
+    user_id
+    message_id
+    message
+    name
+  }
+}
+
+mutation AddMessage($message: String!, $userID: Int!){
+    writeMessage(message:$message,userID:$userID)
+}
+
+
+mutation signUp($userName: String!, $password: String!){
+    signUp(userName:$userName,password:$password){
+        id
+        name
+    }
+}
+
+mutation login($userName: String!, $password: String!){
+    login(userName:$userName,password:$password){
+        id
+        name
+    }
+}
+
+subscription ObserveMessage{
+    newMessage{
+        user_id
+        message_id
+        message
+        name
+    }
+}

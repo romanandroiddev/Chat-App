@@ -1,0 +1,35 @@
+type Foods {
+    id: ID!
+    name: String!
+    price: Int!
+    img: String
+}
+
+type Query {
+    foods: [Foods]!
+    messages: [Message]!
+}
+
+type Mutation {
+    addFood(name: String!, price: Int!): Foods!
+    signUp(userName: String!, password: String!): User!
+    login(userName: String!, password: String!): User!
+    writeMessage(message: String!, userID: Int!): String!
+}
+
+type Subscription {
+    foodAdded: Foods!
+    newMessage: Message!
+}
+
+type Message {
+    user_id: Int!
+    message_id: Int!
+    message: String!
+    name: String!
+}
+
+type User {
+    id: Int!
+    name: String!
+}
